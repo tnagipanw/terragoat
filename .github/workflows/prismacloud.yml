@@ -14,9 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Run PrismaCloud
-      id: PrismaCloud
-      uses: prismacloudio/prismacloud-action@master
+    - name: Run Prisma Cloud
+      id: Prisma Cloud
+      uses: prismacloudio/checkov-action@master
+      env:
+        PRISMA_API_URL: https://api3.prismacloud.io
       with:
         api-key: ${{ secrets.BC_API_KEY }}
         directory: terraform/
