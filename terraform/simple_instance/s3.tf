@@ -17,5 +17,6 @@ resource "aws_s3_bucket" "dockingbay" {
     git_repo             = "terragoat"
     yor_trace            = "037021b5-2af0-47dd-af9f-efa7f83b460e"
     Privacy              = ""
+    yor_name             = "dockingbay"
   }
 }
